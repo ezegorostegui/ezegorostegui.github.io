@@ -1,0 +1,515 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-align: justify;
+}
+body,footer{
+    font-family: 'Source Serif Pro', serif;
+}
+
+
+/*Todos los elementos del header*/
+header{
+    display: flex;
+    height: 19rem;
+    width: 100%;
+    font-family: 'Smooch', cursive;
+    background-image: url(../Imágenes/fondo2.jpg);
+}
+.logo{
+    display: flex;
+    place-content: center center;
+    flex-basis: 25%;
+}
+.logo img{
+    height: 12rem;
+    align-content: center;
+    padding: 0.3rem;
+    margin: auto;
+    background-color: burlywood;
+}
+.frase{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    place-content: center center;
+}
+.frase p{
+    font-size: 5.3rem;
+    color: black;
+    margin: 0% auto;
+    text-align: center;
+}
+.favicons1{
+    width: 25%;
+    display: flex;
+    place-content: flex-end center;
+    flex-wrap: wrap;
+}
+.favicons1 a{
+    text-decoration: none;
+}
+.favicons1 i{
+    display: flex;
+    padding: 0.6rem;
+    font-size: 1.8rem;
+    color:black;
+}
+@media screen and (max-width: 40rem) {
+    header{
+        flex-direction: column;
+    }
+    header .logo{  
+        height: 50%;
+    }
+    .logo img{
+        height: 80%;
+    }
+    .frase{
+        height: 50%;
+        width: 100%;
+    }
+    header .frase>p {
+        width: 100%;
+        font-size: 3rem;
+    }
+    header .favicons1{
+        display: none;
+    }
+}
+@media screen and (min-width: 40rem) and (max-width: 60rem){
+    .frase p{
+        font-size: 4rem;
+    }
+}
+
+
+/*Todos los elementos del nav*/
+#menu{
+    width: 100%;
+    height: 2.5rem;
+    background-image: url(../Imágenes/fondo4.png);
+    display: flex;
+}
+#menu>li{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+#menu li>a{
+    font-size: 1.6rem;
+    color: white;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+}
+.desplegable{
+    display: none;
+}
+#menu li:hover>.desplegable {
+   display: block;
+   z-index: 10;
+}
+#menu li:hover>.desplegable>a{
+    display: block;
+    text-decoration:none;
+    text-align: center;
+    font-size: 1.25rem;
+    color: white;
+    padding: 0.2rem;
+    background-image: url(../Imágenes/fondo4.png);
+}
+@media screen and (max-width: 40rem){
+    #menu li:hover>ul {
+        display: none;
+    }
+    #menu li>a{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (min-width: 40rem) and (max-width: 60rem){
+    #menu li:hover>ul {
+        display: none;
+    }
+    #menu li>a{
+        font-size: 1.4rem;
+    }
+}
+@media screen and (min-width: 60rem) and (max-width: 80rem){
+    #menu li>a{
+        font-size: 1.5rem;
+    }
+}
+
+/*Todos los elementos del main*/
+main{
+    background-image: url(../Imágenes/fondo3.jpg);
+    color: rgb(212, 209, 212);
+    font-size: 1.25rem;
+}
+.grid{
+    display: grid;
+    width: 100%;
+    margin: 0% auto;
+    gap: 1rem;
+    grid-template-areas: "l-izq l-izq l-der";
+}
+.lado-izquierdo{
+    grid-area: l-izq;
+}
+.lado-derecho{
+    grid-area: l-der;
+}
+@media screen and (max-width: 40rem){
+    .grid{
+        grid-template-areas: "l-izq"
+                             "l-der";
+    }
+}
+@media screen and (min-width: 40rem) and (max-width: 60rem){
+    .grid{
+        grid-template-areas: "l-izq"
+                             "l-der";
+    }
+}
+
+.seccion1{
+    padding: 1.5rem;
+    margin: 0.5rem,1.25rem,1.25rem,1.6rem;
+}
+h1{
+    margin-left: 2.5rem;
+    padding-bottom: 1.25rem;
+    display: inline-block;
+    text-decoration:underline;
+}
+.seccion1 p{
+    width: 90%;
+    padding: 0.6rem;
+    margin-left: 2.5rem;
+}
+.seccion2{
+    padding: 0.6rem,2.5rem,0rem,0rem;
+}
+.seccion2 p{
+    margin: 0.6rem;
+    padding: 0.6rem;
+    margin-left: 1.5rem;
+}
+.posicion{
+    display: flex;
+    justify-content: space-around;
+}
+.posicion img{
+    border: 0.3rem solid rgb(66, 38, 9);
+    justify-items: center;
+    margin: 0.6rem;
+    max-height: 18.75rem;
+}
+.seccion3{
+    padding: 1.25rem;
+    margin: 0.6rem,0rem,2.5rem,0rem;
+    justify-items: space-between;
+    width: auto;
+}
+h2,h3 {
+    display: inline-block;
+    padding: 0.6rem;
+    margin: 0.6rem;
+    margin-left: 1.5rem;
+    text-decoration: underline;
+}
+.seccion3 li{
+    padding: 0.3rem;
+    margin: 0.3rem;
+    list-style: none;
+}
+aside{
+    margin-top: 2rem;
+    border: 0.3rem groove hsl(30,100%,25%);
+    height: 104rem;
+    max-width: 19rem;
+    overflow: scroll;
+    text-align: right;
+}
+#ubicacion{
+    padding-top: 1rem;
+    margin: 0.6rem,0rem,2.5rem,0rem;
+    width: 20rem;
+}
+#ubicacion h3{
+    padding: 0.6rem;
+    display: block;
+}
+@media screen and (max-width: 40rem){
+    .seccion1 p{
+        margin: 0rem;
+    }
+    .posicion{
+        flex-direction: column;
+        align-items: center;
+    }
+    .posicion img{
+        max-width: 40vh;
+    }
+    aside{
+        display: none;
+    }
+    #ubicacion{
+        text-align: center;
+        width: 38rem;
+        height: 350px;;
+        margin: 0% auto;
+        padding: 0% auto;
+    }
+    #ubicacion h2,h3{
+        text-align: center;
+    }
+    #ubicacion iframe{
+        width: 70%;
+        height: 15rem;
+    }
+}
+@media screen and (min-width: 40rem) and (max-width: 60rem){
+    .posicion{
+        flex-direction: column;
+        align-items: center;
+    }
+    .posicion img{
+        width: 100%;
+        max-width: 40vh;
+    }
+    aside{
+        display: none;
+    }
+    #ubicacion{
+        text-align: center;
+        width: 100%;
+        height: 350px;
+        margin: 0% auto;
+        padding-top: 0%;
+    }
+    #ubicacion h3{
+        text-align: center;
+    }
+    #ubicacion iframe{
+        width: 70%;
+        height: 15rem;
+    }
+}
+@media screen and (min-width: 60rem) and (max-width: 80rem){
+    .posicion{
+        flex-direction: column;
+        align-items: center;
+    }
+    .posicion img{
+        width: 100%;
+        max-width: 40vh;
+    }
+}
+
+.seccion4{
+    height: 25rem;
+    background-image: url(../Imágenes/fondo4.png);
+}
+.seccion4 h3{
+    padding: 0.6rem;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+}
+.caja{
+    width: 100%;
+    overflow-x: hidden;
+    justify-content: center;
+}
+.caja .carrusel{
+    height: 100%;
+    width: 200%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    text-align: center;
+    padding: 0.5rem;
+    transition: all .5s ease;
+    transform: translateX(0%);
+}
+.caja .carrusel img{
+    margin: 0.6rem;
+    width: auto;
+    max-width: 30rem;
+    border: 0.3rem solid grey;
+}
+.caja .puntos{
+    width: 100%;
+    padding: 0.3rem;
+    margin: 0.2rem;
+    height: 5%;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+.caja .item{
+    width: 0.6rem;
+    height: 0.6rem;
+    margin: 0.2rem;
+    background-color: rgb(212, 209, 212);
+}
+.puntos .seleccionado{
+    background-color: orangered;
+}
+@media screen and (max-width: 40rem){
+    .caja{
+        overflow-x: scroll;
+    }
+    .caja .carrusel{
+        width: 180rem;
+        justify-content: flex-start;
+    }
+    .caja .carrusel img{
+        width: auto;
+    }
+    .caja .puntos{
+        visibility: hidden;
+    }
+}
+@media screen and (min-width: 40rem) and (max-width: 60rem){
+    .caja{
+        overflow-x: scroll;
+    }
+    .caja .carrusel{
+        width: 200rem;
+        justify-content: flex-start;
+    }
+    .caja .carrusel img{
+        width: auto;
+    }
+    .caja .puntos{
+        visibility: hidden;
+    }
+}
+@media screen and (min-width: 60rem) and (max-width: 80rem){
+    .caja{
+        overflow-x: scroll;
+    }
+    .caja .carrusel{
+        width: 200rem;
+        justify-content: flex-start;
+    }
+    .caja .carrusel img{
+        width: auto;
+    }
+    .caja .puntos{
+        visibility: hidden;
+    }
+}
+
+
+/*Todos los elementos del footer*/
+footer{
+    width: 100%;
+    display: flex;
+    place-content: center center;
+    background-image: url(../Imágenes/fondo2.jpg);
+    height: 19rem;
+}
+#datos{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    place-content: center center;
+}
+#datos p{
+    padding: 0.3rem;
+    margin: 0.2rem;
+    text-align: center;
+    font-weight: 500;
+}
+.favicons2 {
+    display: flex;
+    flex-wrap: wrap;
+    place-content: flex-end center;
+}
+.favicons2 i{
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    color: black;
+}
+footer .logo{
+    width: 30%;
+    display: flex;
+    place-content: center center;
+}
+footer .logo>img{
+    padding: 0.3rem;
+    text-align: center;
+    background-color: burlywood;
+}
+form{
+    width: 35%;
+    margin-top: 4rem;
+}
+.form {
+    width: 100%;
+}
+.form li{
+    list-style: none;
+    display: flex;
+    text-align: center;
+    place-content: center center;
+}
+.form li>input, .form li>textarea {
+    width: 70%;
+    padding: 0.2rem;
+    margin: 0.2rem;
+}
+.form li>button{
+    border-radius: 0.3rem;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+@media screen and (max-width: 40rem){
+    footer{
+        height: 45rem;
+        flex-direction: column;
+    }
+    #datos{
+        width: 100%;
+        height: 35%;
+    }
+    .favicons2 i{
+        padding-bottom: 0px;
+    }
+    footer .logo{
+        height: 90%;
+        width: auto;
+    }
+    form{
+        height: 35%;
+        width: 100%;
+        margin: 0rem;
+        display: flex;
+        place-content: center center;
+    }
+    .form{
+        padding: 0.3rem;
+        text-align: center;
+    }
+}
+@media screen and (min-width: 40rem) and (max-width: 60rem){
+    footer .logo img{
+        width: 90%;
+        height: auto;
+    }
+    form{
+        place-content: center center;
+    }
+    .form{
+        text-align: center;
+    }
+}
